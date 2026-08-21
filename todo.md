@@ -14,7 +14,8 @@
 - [x] Verify the rendered desktop and mobile UI and validate the application build.
 - [x] Save the finished project checkpoint after the checklist review.
 - [x] Make scheduled escalation writes fully idempotent under cron retries or concurrent callbacks, with regression coverage.
-- [ ] Verify the published scheduler can arm and invoke the protected heartbeat callback in production.
+- [x] Verify the published scheduler can arm and invoke the protected heartbeat callback in production.
+- [x] Confirm the live production domain responds and document the heartbeat activation step for the authenticated operator.
 - [x] Verify the conditional scheduler transition writes audit and trigger evidence only after a single-row state update.
 - [x] Run the scheduled-retry regression test alongside the full test suite.
 - [x] Add crypto round-trip coverage that verifies persisted payloads are ciphertext and successful decryption remains browser-local.
