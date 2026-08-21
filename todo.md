@@ -1,0 +1,27 @@
+# Project TODO
+
+- [x] Model zero-knowledge vault, protection profile, escalation, trigger-event, and audit-log data with ciphertext-only persistence.
+- [x] Add owner-scoped protected backend procedures for vault management, check-ins, configuration, audit history, and panic wipe.
+- [x] Register a scheduled heartbeat evaluator that advances the four-tier escalation state machine idempotently.
+- [x] Build simulated multi-channel trigger dispatch records for secure webhook, automated email, and decentralized network ping channels.
+- [x] Implement browser-only AES-GCM key derivation, encryption, decryption, and local key-session lifecycle using the Web Crypto API.
+- [x] Create terminal-inspired dashboard with phosphor-green and amber status states, scanlines, monospace typography, and live countdowns.
+- [x] Build vault create, decrypt/view, and delete workflows that never send plaintext to the backend.
+- [x] Build heartbeat check-in and configurable grace-period controls.
+- [x] Build an audit console that visualizes escalation state transitions and simulated trigger events.
+- [x] Add a hold-to-confirm panic-wipe workflow that destroys owner vault rows and clears browser-local cryptographic state.
+- [x] Add and run unit tests for crypto-supporting contracts, state transitions, owner scoping, and destructive wipe behavior.
+- [x] Verify the rendered desktop and mobile UI and validate the application build.
+- [x] Save the finished project checkpoint after the checklist review.
+- [x] Make scheduled escalation writes fully idempotent under cron retries or concurrent callbacks, with regression coverage.
+- [ ] Verify the published scheduler can arm and invoke the protected heartbeat callback in production.
+- [x] Verify the conditional scheduler transition writes audit and trigger evidence only after a single-row state update.
+- [x] Run the scheduled-retry regression test alongside the full test suite.
+- [x] Add crypto round-trip coverage that verifies persisted payloads are ciphertext and successful decryption remains browser-local.
+- [x] Add owner-scoped router coverage for vault operations and panic-wipe confirmation requirements.
+- [x] Add an escalation-write regression test proving a zero-row conditional update produces no audit or simulated trigger rows.
+- [x] Add a database regression test proving vault delete operations constrain by authenticated owner ID.
+- [x] Add protected panic-wipe flow coverage that validates its authenticated destructive pathway.
+- [x] Add helper-level regression coverage proving a non-owner cannot delete another operator’s ciphertext row.
+- [x] Exercise deleteVaultEntry directly against a controlled transaction double and verify it applies the current user ID to the persisted delete condition.
+- [x] Verify deletion behavior leaves a non-owner’s ciphertext row untouched when the owner-qualified lookup finds no matching record.
